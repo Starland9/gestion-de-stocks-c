@@ -13,7 +13,9 @@ cd gestion-de-stocks-c
 
 ```bash
 make
+```
 
+```bash
 make run
 ```
 
