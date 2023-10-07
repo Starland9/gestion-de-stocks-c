@@ -1,0 +1,11 @@
+{
+  "cmake.configureOnOpen": true,
+  "files.associations": {
+    "*.html": "html",
+    "produit.h": "c",
+    "stock.h": "c",
+    "stdio.h": "c",
+    "menu.h": "c"
+  },
+  "C_Cpp.errorSquiggles": "disabled"
+}
