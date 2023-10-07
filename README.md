@@ -7,8 +7,8 @@ Un simple gestionnaire Stock en ligne de commande code en C
 # Comment installer ?
 
 ```bash
-git clone https://github.com/Starland9/gestion-de-stocks.git
-cd gestion-de-stocks
+git clone https://github.com/Starland9/gestion-de-stocks-c.git
+cd gestion-de-stocks-c
 ```
 
 ```bash
