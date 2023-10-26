@@ -1,6 +1,6 @@
-# gestion-de-stocks
+# Gestionnaire de stocks
 
-Un simple gestionnaire Stock en ligne de commande code en C
+Un simple gestionnaire Stock en ligne de commande en C
 
 ---
 
