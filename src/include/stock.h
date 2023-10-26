@@ -21,7 +21,6 @@ Tout ce qui concerne le stock
 
 #endif // _STR__
 
-
 typedef struct Stock Stock;
 /// @brief Structure representant le stock
 struct Stock
@@ -38,6 +37,6 @@ int nombre_produit(Stock *Stock);
 void enregistrer_stock(Stock *stock);
 Stock *charger_stock();
 void vendre_produit(Stock *stock, int id, int quantite);
+void reapprovisionner_produit(Stock *stock, int id, int quantite);
 void cls();
 void fermer_stock(Stock *stock);
-

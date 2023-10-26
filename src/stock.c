@@ -1,5 +1,3 @@
-
-
 #if !defined(_STOCK_)
 #define _STOCK_
 #include "include/stock.h"
@@ -174,6 +172,48 @@ void vendre_produit(Stock *stock, int id, int quantite)
     }
 }
 
+/// @brief Reapprovisionner un produit
+/// @param stock Le stock dans lequel qe trouve le produit
+/// @param id l'id du produit en question
+/// @param quantite la quantité de produit que l'on veut ajouter
+void reapprovisionner_produit(Stock *stock, int id, int quantite)
+{
+    Produit *p = obtenir_produit(stock, id);
+    if (p == NULL)
+    {
+        printf("Ce produit n'a pa été trouvé dans le stock !!\nVoulez-vous essayer un autre ID ? (1: OUI)> ");
+        int id2, choix;
+        scanf("%d", &choix);
+        if (choix == 1)
+        {
+            printf("Entrer le nouvel id (Entre 1 et %d)\n>", nombre_produit(stock));
+            scanf("%d", &id2);
+            reapprovisionner_produit(stock, id2, quantite);
+        }
+        return;
+    }
+    printf("Vous avez choisi Le produit nommé: %s\n", p->designation);
+    if (quantite < 0)
+    {
+        printf("Désolé mais cette quantite est invalide. Voulez-vous modifier la quantité ? (1: OUI)> ");
+        int qtte, choix;
+        scanf("%d", &choix);
+        if (choix == 1)
+        {
+            printf("Entrer la nouvelle quantite\n>");
+            scanf("%d", &qtte);
+            reapprovisionner_produit(stock, id, qtte);
+        }
+    }
+    else
+    {
+        p->quantite += quantite;
+        printf("Le reapprovisionnement de %d %s a été réalisé avec succes. Cela fait %d %s\n",
+               quantite, p->designation, p->quantite, p->designation);
+    }
+}
+
+/// @brief Effacer la console
 void cls()
 {
     system("clear");

@@ -40,8 +40,9 @@ int main(int argc, char const *argv[])
 
         printf("1. Vendre un produit\n");
         printf("2. Enregistrer un nouveau produit\n");
-        printf("3. Afficher le stock\n");
-        printf("4. Quitter");
+        printf("3. Reapprovisioner un produit\n");
+        printf("4. Afficher le stock\n");
+        printf("5. Quitter");
 
         printf("\nVeuillez faire un choix\n");
         printf(">");
@@ -59,10 +60,14 @@ int main(int argc, char const *argv[])
             break;
 
         case 3:
-            afficher_stock(stock);
+            input_reaprovivionner_produit(stock);
             break;
 
         case 4:
+            afficher_stock(stock);
+            break;
+
+        case 5:
             fermer_stock(stock);
             printf("\n### BYE BYE ###\n");
             run = 0;

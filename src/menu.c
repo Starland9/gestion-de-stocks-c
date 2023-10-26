@@ -2,6 +2,7 @@
 #if !defined(_STOCK_)
 #define _STOCK_
 #include "include/stock.h"
+#include "menu.h"
 #endif // _STOCK_
 
 void input_enregistrer_produit(Stock *stock)
@@ -38,4 +39,17 @@ void input_vendre_produit(Stock *stock)
     int qtte;
     scanf("%d", &qtte);
     vendre_produit(stock, id, qtte);
+}
+
+void input_reaprovivionner_produit(Stock *stock)
+{
+    cls();
+    afficher_stock(stock);
+    printf("\nVeuillez entrer l'id du produit à reapprovisionner (Entre 1 et %d)\n> ", nombre_produit(stock));
+    int id;
+    scanf("%d", &id);
+    printf("Combien voulez-vous en ajouter ?\n>");
+    int qtte;
+    scanf("%d", &qtte);
+    reapprovisionner_produit(stock, id, qtte);
 }
