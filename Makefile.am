@@ -1,2 +1,2 @@
 bin_PROGRAMS = stocky
-stocky_SOURCES = src/main.c
+stocky_SOURCES = src/**
