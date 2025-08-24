@@ -100,6 +100,10 @@ Stock *charger_stock()
 {
     Stock *stock = creer_stock();
     FILE *f = fopen("stock.db", "r");
+    if (f == NULL)
+    {
+        return stock;
+    }
     while (1)
     {
         char d[256];

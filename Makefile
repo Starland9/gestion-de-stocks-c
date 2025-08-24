@@ -5,7 +5,7 @@ APPNAME := stocky
 CXX := gcc
 
 # define the FLAGS
-FLAGS := -Wall
+FLAGS := -Wall -g
 
 # define bin directory
 BIN := bin
